@@ -75,7 +75,7 @@ nav ul li a:hover {
 /* 3. ESTRUTURA DE SEÇÕES E TÍTULOS */
 
 section {
-    padding: 80px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
+    padding: 60px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
 }
 
 h2 {
