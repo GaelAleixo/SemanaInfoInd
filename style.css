@@ -6,7 +6,7 @@
 :root {
     /* Variáveis para manter a consistência de cores em todo o documento */
     --primary-color: #32a041;   /* Verde institucional do IFSP */
-    --secondary-color: #2c3e50; /* Azul escuro para contraste e seriedade */
+    --secondary-color: #32a041; /* Verde para contraste e seriedade */
     --accent-color: #e74c3c;    /* Vermelho para destaques pontuais */
     --text-dark: #2d3436;      /* Cinza quase preto para o corpo do texto */
     --text-light: #ffffff;     /* Branco para textos sobre fundos escuros */
@@ -75,7 +75,7 @@ nav ul li a:hover {
 /* 3. ESTRUTURA DE SEÇÕES E TÍTULOS */
 
 section {
-    padding: 60px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
+    padding: 0px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
 }
 
 h2 {
@@ -224,6 +224,7 @@ img {
     box-shadow: var(--shadow);
     margin-top: 2rem;
     width: 100%;       /* Ocupa a largura total do container pai (limitado no HTML) */
+    margin-bottom: 50px;
 }
 
 form input {
@@ -244,7 +245,7 @@ footer {
     background-color: var(--secondary-color);
     color: var(--text-light);
     text-align: center;
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 footer p {
