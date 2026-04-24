@@ -1,85 +1,92 @@
-/* Importação de fonte moderna */
+/* 1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS */
+
+/* Importação da fonte Inter via Google Fonts para uma tipografia moderna e legível */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #32a041; /* Verde IFSP */
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --text-dark: #2d3436;
-    --text-light: #ffffff;
-    --bg-light: #f9f9f9;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    /* Variáveis para manter a consistência de cores em todo o documento */
+    --primary-color: #32a041;   /* Verde institucional do IFSP */
+    --secondary-color: #2c3e50; /* Azul escuro para contraste e seriedade */
+    --accent-color: #e74c3c;    /* Vermelho para destaques pontuais */
+    --text-dark: #2d3436;      /* Cinza quase preto para o corpo do texto */
+    --text-light: #ffffff;     /* Branco para textos sobre fundos escuros */
+    --bg-light: #f9f9f9;       /* Fundo cinza muito claro para evitar cansaço visual */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    --transition: all 0.3s ease; /* Tempo padrão para todas as animações/hovers */
 }
 
+/* Reset básico para garantir que o site pareça igual em todos os navegadores */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;      /* Remove margens padrão */
+    padding: 0;     /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Garante que padding/border não aumentem o tamanho total do elemento */
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--bg-light);
-    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif; /* Aplica a fonte importada ao site todo */
+    line-height: 1.6;               /* Espaçamento entre linhas para melhor leitura */
+    color: var(--text-dark);        /* Aplica a cor de texto padrão */
+    background-color: var(--bg-light); /* Define a cor de fundo da página */
+    scroll-behavior: smooth;        /* Suaviza o movimento ao clicar nos links da Nav */
 }
 
-/* Header & Navigation */
+/* 2. CABEÇALHO (HEADER) E NAVEGAÇÃO */
+
 header {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    padding: 1rem 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--shadow);
+    background-color: var(--secondary-color); /* Fundo escuro profissional */
+    color: var(--text-light);                 /* Texto branco */
+    padding: 1rem 5%;                         /* Espaçamento interno (16px topo/base, 5% laterais) */
+    position: sticky;                         /* Mantém o menu fixo no topo ao rolar */
+    top: 0;                                   /* Alinha o menu fixo no topo */
+    z-index: 1000;                            /* Garante que o menu fique acima de todos os elementos */
+    display: flex;                            /* Ativa o Flexbox para alinhar Logo e Nav */
+    justify-content: space-between;           /* Empurra a Logo para a esquerda e Nav para a direita */
+    align-items: center;                      /* Alinha os itens verticalmente ao centro */
+    box-shadow: var(--shadow);                /* Sombra para separar o menu do conteúdo */
 }
 
 header h1 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 1.2rem;     /* Tamanho da logo discreto e elegante */
+    font-weight: 700;      /* Negrito forte */
+    letter-spacing: 1px;   /* Pequeno espaçamento entre letras para ar tecnológico */
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+    display: flex;         /* Coloca os itens do menu um ao lado do outro */
+    list-style: none;      /* Remove as bolinhas da lista */
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+    margin-left: 1.5rem;   /* Espaçamento entre cada link do menu */
 }
 
 nav ul li a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 0.9rem;
-    transition: var(--transition);
+    color: var(--text-light);    /* Cor branca para os links */
+    text-decoration: none;       /* Remove o sublinhado padrão */
+    font-weight: 400;            /* Espessura de fonte normal */
+    font-size: 0.9rem;           /* Tamanho levemente reduzido para elegância */
+    transition: var(--transition); /* Suaviza a troca de cor no hover */
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Muda para verde ao passar o mouse */
 }
 
-/* Main Content Sections */
+/* 3. ESTRUTURA DE SEÇÕES E TÍTULOS */
+
 section {
-    padding: 80px 10%;
+    padding: 80px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
+    font-size: 2.5rem;    /* Títulos de seção grandes e impactantes */
+    margin-bottom: 2rem;  /* Espaço abaixo do título */
+    text-align: center;   /* Centraliza o título */
+    position: relative;   /* Base para o elemento decorativo (after) */
     padding-bottom: 10px;
 }
 
+/* Detalhe visual: barrinha verde abaixo de cada H2 */
 h2::after {
     content: '';
     width: 60px;
@@ -88,28 +95,30 @@ h2::after {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centraliza perfeitamente a barra */
 }
 
-/* Hero Section (Início) */
+/* 4. SEÇÃO HERO (INÍCIO) */
+
 #info {
+    /* Gradiente escuro sobre imagem de fundo para garantir contraste do texto */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 url('https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    background-size: cover;      /* A imagem cobre toda a área disponível */
+    background-position: center; /* Centraliza a imagem de fundo */
+    height: 80vh;                /* Ocupa 80% da altura da tela */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;      /* Alinha itens em coluna (H1, P, Botão) */
+    justify-content: center;     /* Centraliza verticalmente */
+    align-items: center;         /* Centraliza horizontalmente */
     text-align: center;
     color: var(--text-light);
 }
 
 #info h1 {
-    font-size: 3.5rem;
+    font-size: 3.5rem;      /* Título principal gigante */
     margin-bottom: 1rem;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Letras maiúsculas para autoridade */
 }
 
 #info p {
@@ -117,53 +126,57 @@ h2::after {
     margin-bottom: 2rem;
 }
 
-/* Buttons */
+/* 5. COMPONENTES: BOTÕES */
+
 .btn {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: var(--transition);
+    background-color: var(--primary-color); /* Fundo verde */
+    color: white;                           /* Texto branco */
+    padding: 0.8rem 2rem;                   /* Tamanho do botão */
+    text-decoration: none;                  /* Sem sublinhado */
+    border-radius: 5px;                     /* Cantos levemente arredondados */
+    font-weight: 600;                       /* Texto em semi-negrito */
+    transition: var(--transition);          /* Suaviza efeito de hover */
     border: none;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #278335;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: #278335;      /* Escurece o verde ao passar o mouse */
+    transform: translateY(-2px);    /* Efeito de "levantar" o botão */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra aumenta no hover */
 }
 
-/* Programa Section */
+/* 6. SEÇÃO PROGRAMA */
+
 #programa {
     background-color: white;
 }
 
 #programa ul {
     list-style: none;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 600px; /* Limita a largura para não ficar muito esticado */
+    margin: 0 auto;   /* Centraliza a lista na página */
 }
 
 #programa li {
-    background: var(--bg-light);
-    margin-bottom: 10px;
-    padding: 1.5rem;
-    border-left: 5px solid var(--primary-color);
-    border-radius: 0 5px 5px 0;
+    background: var(--bg-light);         /* Fundo cinza claro */
+    margin-bottom: 10px;                 /* Espaço entre os horários */
+    padding: 1.5rem;                     /* Espaço interno */
+    border-left: 5px solid var(--primary-color); /* Destaque verde na esquerda */
+    border-radius: 0 5px 5px 0;          /* Arredonda apenas o lado direito */
     font-weight: 600;
-    display: flex;
-    justify-content: space-between;
+    display: flex;                       /* Alinha horário e título do evento */
+    justify-content: space-between;      /* Empurra o texto para as extremidades */
 }
 
-/* Palestrantes Grid */
+/* 7. GRID DE PALESTRANTES */
+
 .grid {
-    display: grid;
+    display: grid; /* Ativa o CSS Grid */
+    /* Cria colunas responsivas: mínimo 250px, máximo 1 fração do espaço */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 2rem;     /* Espaçamento entre os cards de palestrantes */
 }
 
 article {
@@ -171,12 +184,12 @@ article {
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    box-shadow: var(--shadow);      /* Sombra leve para efeito de card */
+    transition: var(--transition); /* Suaviza o movimento de hover */
 }
 
 article:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Card sobe ao passar o mouse */
 }
 
 article h3 {
@@ -184,9 +197,21 @@ article h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Inscrição Form */
+/* Estilização das Imagens (Baseado na sua seleção no Guia) */
+img {
+    width: 150px;           /* Largura fixa para manter o círculo perfeito */
+    height: 150px;          /* Altura fixa */
+    object-fit: cover;      /* Corta a imagem para preencher o círculo sem distorcer */
+    border-radius: 50%;     /* Transforma o quadrado em um círculo perfeito */
+    border: 3px solid var(--primary-color); /* Borda verde ao redor da foto */
+    margin-bottom: 1rem;    /* Espaço entre a foto e o nome do palestrante */
+    box-shadow: var(--shadow); /* Profundidade na imagem */
+}
+
+/* 8. FORMULÁRIO DE INSCRIÇÃO */
+
 #inscricao {
-    background-color: #ecf0f1;
+    background-color: #ecf0f1; /* Fundo levemente diferente para destacar o formulário */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,20 +223,23 @@ article h3 {
     border-radius: 10px;
     box-shadow: var(--shadow);
     margin-top: 2rem;
+    width: 100%;       /* Ocupa a largura total do container pai (limitado no HTML) */
 }
 
 form input {
-    border: 1px solid #ddd !important;
-    border-radius: 4px;
+    border: 1px solid #ddd !important; /* Borda cinza clara */
+    border-radius: 4px;                /* Cantos arredondados nos campos */
     font-size: 1rem;
+    padding: 0.8rem;                   /* Aumenta a área de clique/digitação */
 }
 
 form input:focus {
-    outline: none;
-    border-color: var(--primary-color) !important;
+    outline: none;                    /* Remove a borda azul padrão do navegador */
+    border-color: var(--primary-color) !important; /* Muda borda para verde ao focar */
 }
 
-/* Footer */
+/* 9. RODAPÉ (FOOTER) */
+
 footer {
     background-color: var(--secondary-color);
     color: var(--text-light);
@@ -222,20 +250,31 @@ footer {
 footer p {
     margin-bottom: 1rem;
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.8; /* Texto levemente transparente para menos peso visual */
 }
 
-/* Responsividade */
+/* 10. RESPONSIVIDADE (MOBILE-FIRST) */
+
+/* Regras aplicadas quando a tela for menor que 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: column; /* Logo acima do menu no celular */
+        padding: 1rem;
     }
     
     nav ul {
-        margin-top: 1rem;
+        margin-top: 1rem;       /* Espaço entre a logo e o menu */
     }
     
+    nav ul li {
+        margin: 0 0.7rem;       /* Reduz espaço entre links para caber na tela */
+    }
+
     #info h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;      /* Diminui o título principal em telas pequenas */
+    }
+    
+    section {
+        padding: 50px 5%;       /* Reduz as margens laterais no celular */
     }
 }
