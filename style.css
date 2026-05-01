@@ -5,10 +5,10 @@
 
 :root {
     /* Variáveis para manter a consistência de cores em todo o documento */
-    --primary-color: #32a041;   /* Verde institucional do IFSP */
-    --secondary-color: #32a041; /* Verde para contraste e seriedade */
+    --primary-color: #011629ff;   /* Azul petróleo */
+    --secondary-color: #34b2feff; /* Azul claro para contraste e seriedade */
     --accent-color: #e74c3c;    /* Vermelho para destaques pontuais */
-    --text-dark: #2d3436;      /* Cinza quase preto para o corpo do texto */
+    --text-dark: #011629ff;      /* Azul petróleo para o corpo do texto */
     --text-light: #ffffff;     /* Branco para textos sobre fundos escuros */
     --bg-light: #f9f9f9;       /* Fundo cinza muito claro para evitar cansaço visual */
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
@@ -49,19 +49,22 @@ header h1 {
     font-size: 1.2rem;     /* Tamanho da logo discreto e elegante */
     font-weight: 700;      /* Negrito forte */
     letter-spacing: 1px;   /* Pequeno espaçamento entre letras para ar tecnológico */
+    color: var(--text-dark); 
 }
 
 nav ul {
     display: flex;         /* Coloca os itens do menu um ao lado do outro */
     list-style: none;      /* Remove as bolinhas da lista */
+    color:#011629ff;
 }
 
 nav ul li {
     margin-left: 1.5rem;   /* Espaçamento entre cada link do menu */
+    color:#011629ff;
 }
 
 nav ul li a {
-    color: var(--text-light);    /* Cor branca para os links */
+    color: var(--text-dark);    /* Cor branca para os links */
     text-decoration: none;       /* Remove o sublinhado padrão */
     font-weight: 400;            /* Espessura de fonte normal */
     font-size: 0.9rem;           /* Tamanho levemente reduzido para elegância */
@@ -69,13 +72,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color); /* Muda para verde ao passar o mouse */
+    color: white; /* Muda para Branco ao passar o mouse */
 }
 
 /* 3. ESTRUTURA DE SEÇÕES E TÍTULOS */
 
 section {
-    padding: 0px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
+    padding: 15px 10%; /* Espaçamento generoso entre seções para o design "respirar" */
 }
 
 h2 {
@@ -86,7 +89,7 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Detalhe visual: barrinha verde abaixo de cada H2 */
+/* Detalhe visual: barrinha Azul Petróleo abaixo de cada H2 */
 h2::after {
     content: '';
     width: 60px;
@@ -102,8 +105,8 @@ h2::after {
 
 #info {
     /* Gradiente escuro sobre imagem de fundo para garantir contraste do texto */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('Imagens/3.png');
     background-size: cover;      /* A imagem cobre toda a área disponível */
     background-position: center; /* Centraliza a imagem de fundo */
     height: 80vh;                /* Ocupa 80% da altura da tela */
@@ -130,7 +133,7 @@ h2::after {
 
 .btn {
     display: inline-block;
-    background-color: var(--primary-color); /* Fundo verde */
+    background-color: var(--primary-color); /* Fundo Azul petróleo */
     color: white;                           /* Texto branco */
     padding: 0.8rem 2rem;                   /* Tamanho do botão */
     text-decoration: none;                  /* Sem sublinhado */
@@ -142,7 +145,8 @@ h2::after {
 }
 
 .btn:hover {
-    background-color: #278335;      /* Escurece o verde ao passar o mouse */
+    background-color: #34b2feff;      /* Troca o azul ao passar o mouse */
+    color: var(--text-dark);
     transform: translateY(-2px);    /* Efeito de "levantar" o botão */
     box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra aumenta no hover */
 }
@@ -163,7 +167,7 @@ h2::after {
     background: var(--bg-light);         /* Fundo cinza claro */
     margin-bottom: 10px;                 /* Espaço entre os horários */
     padding: 1.5rem;                     /* Espaço interno */
-    border-left: 5px solid var(--primary-color); /* Destaque verde na esquerda */
+    border-left: 5px solid var(--primary-color); /* Destaque Azul petróleo na esquerda */
     border-radius: 0 5px 5px 0;          /* Arredonda apenas o lado direito */
     font-weight: 600;
     display: flex;                       /* Alinha horário e título do evento */
@@ -203,7 +207,7 @@ img {
     height: 150px;          /* Altura fixa */
     object-fit: cover;      /* Corta a imagem para preencher o círculo sem distorcer */
     border-radius: 50%;     /* Transforma o quadrado em um círculo perfeito */
-    border: 3px solid var(--primary-color); /* Borda verde ao redor da foto */
+    border: 3px solid var(--primary-color); /* Borda Azul petróleo ao redor da foto */
     margin-bottom: 1rem;    /* Espaço entre a foto e o nome do palestrante */
     box-shadow: var(--shadow); /* Profundidade na imagem */
 }
@@ -236,13 +240,13 @@ form input {
 
 form input:focus {
     outline: none;                    /* Remove a borda azul padrão do navegador */
-    border-color: var(--primary-color) !important; /* Muda borda para verde ao focar */
+    border-color: var(--primary-color) !important; /* Muda borda para Azul petróleo ao focar */
 }
 
 /* 9. RODAPÉ (FOOTER) */
 
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
     padding: 1rem 0;
@@ -251,7 +255,7 @@ footer {
 footer p {
     margin-bottom: 1rem;
     font-size: 0.9rem;
-    opacity: 0.8; /* Texto levemente transparente para menos peso visual */
+    opacity: 0.9; /* Texto levemente transparente para menos peso visual */
 }
 
 /* 10. RESPONSIVIDADE (MOBILE-FIRST) */
